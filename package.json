@@ -1,0 +1,39 @@
+{
+  "name": "eslint-plugin-interpolation-outside-template",
+  "version": "0.0.1",
+  "description": "Verifies that string interpolation is done within a template literal",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "MIT ODL Engineering",
+  "email": "mitx-devops@mit.edu",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint src test && istanbul cover --report html _mocha -- src/**/*_test.js --compilers js:babel-core/register",
+    "prepublish": "npm run compile",
+    "compile": "babel --optional runtime -d lib/ src/"
+  },
+  "peerDependencies": {
+    "eslint": "^2.6.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-runtime": "^6.9.2",
+    "eslint": "^2.6.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "BSD-3-Clause"
+}
